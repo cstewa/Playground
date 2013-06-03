@@ -16,10 +16,16 @@ end
 get "/movieresults" do
 		@movie_result = Movies.find_by_title(params[:movie_name])
 
+		if 
+			@movie_result.title == nil 
+			erb :movies
+
+		else 	
 	  suckr = ImageSuckr::GoogleSuckr.new
 	  @movie_image = suckr.get_image_url({"q" => "#{@movie_result.title}"})
 	  
 	  erb :movieresults
+		end
 end
 
 get "/stock" do 
