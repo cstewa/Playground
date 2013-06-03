@@ -3,6 +3,7 @@ require "sinatra/reloader"
 require "movies"
 require "stock_quote"
 require "image_suckr"
+require "pry"
 
 
 get "/" do
@@ -33,8 +34,13 @@ get "/stock" do
 end 
 
 get "/stock_detail" do
-	@stock_result = StockQuote::Stock.quote(params[:stock_symbol])
-	erb :stock_detail
+	begin
+		@stock_result = StockQuote::Stock.quote(params[:stock_symbol])
+		erb :stock_detail
+	rescue
+		erb :stock
+	end
+
 end 
 
 get "/image" do 
