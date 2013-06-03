@@ -1,0 +1,9 @@
+nav li {
+	list-style: none;
+	display: inline;
+}
+
+nav li a {
+	font: Arial;
+	color: #8A2BE2;
+}
