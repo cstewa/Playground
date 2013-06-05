@@ -1,12 +1,18 @@
-<p>Movies</p>
-
-<h2> Which movie would you like to search? </h2>
-
-<form action="/movieresults" method="get">
-	<input type="text" name="movie_name">
-	<button>Go</button>
-</form>
-
+<div class="container">
+	<div class="row">
+			<div class="span9 offset2">
+				<h2 class="movie_prompt"> Which movie would you like to search? </h2>
+				<div class="row">
+					<div class= "span6 offset4" >
+						<form action="/movieresults" method="post" class="form-search">
+							<input type="text" name="movie_name" class="search-query">
+							<button class="btn btn-inverse btn-small"> <i class="icon-facetime-video icon-white"> </i> Go.</button>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
 
 
 

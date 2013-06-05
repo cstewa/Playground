@@ -1,13 +1,20 @@
-<p>Images</p>
-
-
-<h2> Which image would you like to search? </h2>
-
-<form action="/imageresults" method="get">
-	<input type="text" name="image_name">
-	<button>Go</button>
-</form>
-
-<form action="/imagerandom" method="get">
-	<button>Random Image!</button>
-</form>
+<div class="container">
+	<div class="row">
+			<div class="span9 offset3">
+				<h2 class="image_prompt"> Which image would you like to search? </h2>
+				<div class="row">
+					<div class= "span4 offset2" >
+						<form action="/imageresults" method="post" class="form-search">
+							<input type="text" name="image_name" class="search-query">
+							<button class="btn btn-inverse btn-small"> <i class="icon-picture icon-white"> </i> Go.</button>
+						</form>
+					</div>
+					<div class= "span2">
+						<form action="/imagerandom" method="get">
+							<button class="btn btn-inverse btn-small"> <i class="icon-picture icon-white"> </i> Random Image!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>

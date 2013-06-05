@@ -1,3 +1,9 @@
-<p>last traded price: $<%= @stock_result.last %></p>
-<p>company: <%= @stock_result.company %></p>
-<p>market cap: $<%= @stock_result.market_cap %></p>
+<div class="container">
+	<div class="row">
+		<div id="stock_results" class="span8 offset4">
+			<p>Last traded price: $<%= @stock_result.last %></p>
+			<p>Company: <%= @stock_result.company %></p>
+			<p>Market cap: $<%= @stock_result.market_cap %></p>
+		</div>
+	</div>
+</div>

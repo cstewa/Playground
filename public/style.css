@@ -1,9 +1,57 @@
-nav li {
-	list-style: none;
-	display: inline;
+body {
+	background-color: black;
 }
 
-nav li a {
+.navbar .nav>li>a:hover {
+	 color: #00F5FF;
+}
+
+.navbar .nav>li>a{
+	 color: black;
+}
+
+#welcome {
 	font: Arial;
-	color: #8A2BE2;
+	color: #00F5FF;
+	padding-top: 80px;
+	text-align: right;
+}
+
+.movie_prompt, .stock_prompt, .image_prompt, .movie_result_text, #stock_results{
+	color: #00F5FF;
+}
+
+#movie_result_text {
+	margin: auto;
+	width: 600px;
+	text-align: right;
+}
+
+.movie_result_text li{
+	display: inline;
+	list-style: none;
+	font-size: 16px;
+}	
+
+.btn {
+	color: white;
+}
+
+#resubmit_button_button{
+	color: #00F5FF;
+}
+
+.stock_prompt {
+	padding-left: 30px;
+}
+
+#stock_results{ 
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 40px;
+	padding-top: 35px;
+}	
+
+.resubmit_button{
+	margin-left: 800px;
 }

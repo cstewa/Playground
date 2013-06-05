@@ -1,10 +1,11 @@
-
-<ul>
-<li>Year Made: <%= @movie_result.year %> </li>
-<li>Rating: <%= @movie_result.rated %> </li>
-<li>Released: <%= @movie_result.released %> </li>
-<li>Director: <%= @movie_result.director %> </li>
-<li>Actors: <%= @movie_result.actors %> </li>
+<div id="movie_result_text">
+<ul class="movie_result_text">
+<li>Year Made: <%= @movie_result.year %> |</li>
+<li>Rating: <%= @movie_result.rated %>  | </li>
+<li>Released: <%= @movie_result.released %> | </li>
+<li>Director: <%= @movie_result.director %>  | </li>
+<li>Actors: <%= @movie_result.actors.join(" , ") %> </li>
 </ul>
+</div>
 
 <img src="<%= @movie_image %>" />

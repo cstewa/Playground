@@ -1,6 +1,10 @@
-<form action="/imageresults" method="get">
+
+<div class="resubmit_button">
+<form action="/imageresults" method="post">
 	<input type="hidden" name="image_name" value="<%= params[:image_name]%>">
-	<button>Resubmit?</button>
+	<button id="resubmit_button_button" class="btn btn-inverse btn-small"> <i class="icon-repeat icon-white"> </i> Resubmit?</button>
 </form>
+</div>
 
 <img src="<%= @imagesearch %>" />
+

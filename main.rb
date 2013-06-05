@@ -14,7 +14,7 @@ get "/movies" do
 		erb :movies
 end 
 
-get "/movieresults" do
+post "/movieresults" do
 		@movie_result = Movies.find_by_title(params[:movie_name])
 
 		if 
@@ -33,7 +33,7 @@ get "/stock" do
 	erb :stock
 end 
 
-get "/stock_detail" do
+post "/stock_detail" do
 	begin
 		@stock_result = StockQuote::Stock.quote(params[:stock_symbol])
 		erb :stock_detail
@@ -47,7 +47,7 @@ get "/image" do
 	erb :image
 end
 
-get "/imageresults" do
+post "/imageresults" do
  	suckr = ImageSuckr::GoogleSuckr.new
  	@imagesearch = suckr.get_image_url({"q" => params[:image_name]})
 	erb :imageresults 
